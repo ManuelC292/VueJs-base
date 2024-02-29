@@ -7,11 +7,18 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <h2>{{titre}}</h2>
+        <p>{{sousTitre}}</p>
+    </div>
     <script>
         app = Vue.createApp({
-            template: `<h2>Première application Vue 2</h2>
-                       <p>... en trois minutes chrono </p>`
+            data() {
+                return {
+                    titre: 'Ma première application Vue 3',
+                    sousTitre: '...en trois minutes chrono !'
+                }
+            }
         });
         app.mount('#app');
     </script>
