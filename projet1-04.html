@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet 1-02</title>
+    <title>Projet 1-04</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <div id="app">
-        <p>Il est exactement {{date}}
+        <p>{{inter ? 'Vrai' : 'Faux'}}</p>
     </div>
     <script>
         app = Vue.createApp({
             data() {
                 return {
-                    date: new Date().toLocaleTimeString()
+                    inter: false
                 }
             }
         });
