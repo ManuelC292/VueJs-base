@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-14</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <textarea name="" id="" cols="30" rows="10" v-model="texte"></textarea>
+        <div style="white-space: pre-line;">{{texte}}</div>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    texte: ''
+                }
+            },
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
