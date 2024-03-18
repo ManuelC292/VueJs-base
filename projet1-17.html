@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-17</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>Cochez les cases des languages que vous connaissez :</p>
+        <br />
+        <input type="radio" v-model="cases" value="HTML">
+        <label for="html">HTML</label>
+        <input type="radio" v-model="cases" value="CSS">
+        <label for="css">CSS</label>
+        <input type="radio" v-model="cases" value="Javascript">
+        <label for="javascript">JavaScript</label>
+        <br />
+        <p>Langage préféré : {{cases}}</p>
+
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    cases: []
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
