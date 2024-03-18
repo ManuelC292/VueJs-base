@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-20</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/67/Jakarta_ee_logo_stacked.png/628px-Jakarta_ee_logo_stacked.png?20190509155049" @mousemove="eventMouseOver($event)">
+        <p>X : {{positionX}} Y : {{positionY}} </p>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    positionX:0,
+                    positionY:0
+                }
+            },
+            methods: {
+                eventMouseOver(event){
+                   this.positionX = event.offsetX
+                   this.positionY = event.offsetY
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

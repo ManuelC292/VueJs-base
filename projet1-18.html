@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-18</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>Nombre de clics sur le bouton : {{nombreClick}}</p>
+        <input type="button" value="Incrémenter le compteur" v-on:click="clique">
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    nombreClick: 0
+                }
+            },
+            methods: {
+                clique(){
+                   this.nombreClick++
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
