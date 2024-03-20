@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-25</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/67/Jakarta_ee_logo_stacked.png/628px-Jakarta_ee_logo_stacked.png?20190509155049" :height="heightParam" :width="widhParam"
+        @click.prevent.right="rightClick"
+        @click.left="leftClick"
+        @click.middle="middleClick"
+        >
+
+    </div>
+    <script>
+        app = Vue.createApp({
+            data() {
+                return {
+                    heightParam:300,
+                    widhParam:300
+                }
+            },
+            methods: {
+                rightClick(){
+                    this.heightParam += 300
+                },
+                leftClick(){
+                    this.heightParam -= 300
+                },
+                middleClick(){
+                    this.widhParam += 300
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

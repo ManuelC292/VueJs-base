@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-23</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a name="goolge" href="https://www.google.fr" @click="stop($event)">Google</a>
+        <br />
+        <a name="bing" href="https://www.bing.fr">Bing</a>
+    </div>
+    <script>
+        app = Vue.createApp({
+            methods: {
+                stop(ev){
+                    ev.preventDefault();
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

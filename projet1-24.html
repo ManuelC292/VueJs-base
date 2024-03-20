@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-24</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div @keydown="actionParent">
+            <input type="text" @keydown.prevent.stop="action($event)"> <!-- applique le preventDefault et le stop propagation directement -->
+            <button @click.once>Cliquez ici</button> <!-- On demande ici de faire qu'un seul click-->
+            <input type="text"@keyup.code="action">
+            <!-- Enter, tab, delete , esc, space up down right left etc...-->
+            <!-- event souris .right .left .middle-->
+        </div>
+    </div>
+    <script>
+        app = Vue.createApp({
+            methods: {
+                action(ev){
+                    console.log('Evènement traité dans le input');
+                    //ev.preventDefault(); // annule l'affichage des carateres dans l'input // empeche le traitement par defaut
+                    //ev.stopPropagation(); // permet de ne pas propager l'évenement au parent
+                },
+                actionParent(){
+                    console.log('Evènement traité dans le parent')
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
