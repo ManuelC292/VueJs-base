@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-30</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+       <!--Directive v-for pour parcourir des objets JSON-->
+      <ul>
+        <li v-for="personne in personnes">{{personne.prenom}} {{personne.nom}} {{personne.age}}</li>
+      </ul>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                   personnes: [
+                    {prenom: 'Jason', nom: 'Statane', age: 25},
+                    {prenom: 'Manuel', nom:'Crespo', age: 42}
+                   ]
+                }
+            },
+            methods: {
+                modifierTaille() {
+                    this.taille = this.taille * 1.1
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

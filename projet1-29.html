@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-29</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+       <!--Arguments dynamique-->
+       <input type="radio" v-model="choix" value="click" checked><label>Clic</label>
+       <input type="radio" v-model="choix" value="dblclick" unchecked><label>Double clic</label>
+       <p>
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/67/Jakarta_ee_logo_stacked.png/628px-Jakarta_ee_logo_stacked.png?20190509155049" :width="taille" @[choix]="modifierTaille">
+       </p>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    taille: 200,
+                    choix: 'click'
+                }
+            },
+            methods: {
+                modifierTaille() {
+                    this.taille = this.taille * 1.1
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

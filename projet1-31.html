@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-31</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+       <!--Gestion des évènements clavier-->
+      <input type="text" @keyup.enter="enMaj" v-model="texte" autofocus>
+      <button @click="enMaj">En Majuscule</button>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    texte: ""
+                }
+            },
+            methods: {
+                enMaj() {
+                    this.texte = this.texte.toUpperCase()
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
