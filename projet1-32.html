@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-32</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       <!--la directive v-cloak-->
+        <div v-cloak>
+            {{texte}}
+        </div>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    texte: "Bonjour"
+                }
+            },
+            methods: {
+                enMaj() {
+                    this.texte = this.texte.toUpperCase()
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

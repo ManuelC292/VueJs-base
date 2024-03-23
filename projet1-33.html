@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-33</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       <!--la directive v-once-->
+        <p v-once>{{nombre}}</p>
+        <p>{{nombre}}</p>
+        <button @click="incrementation">Incrémenter</button>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data () {
+                return {
+                    nombre: 15
+                } 
+            },
+            methods: {
+                incrementation(){
+                    this.nombre++
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
