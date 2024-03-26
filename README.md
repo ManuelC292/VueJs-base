@@ -35,6 +35,6 @@
 - projet1-33 : La directive v-once
 - projet1-34 : Classes conditionnelles
 - projet1-35 : Classes conditionnelles (multiple)
-- projet1-36 :
+- projet1-36 : Style conditionnel
 - projet1-37 :
 - projet1-38 :

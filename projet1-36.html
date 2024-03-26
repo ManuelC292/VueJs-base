@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-36</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--Style conditionnel-->
+        <div>
+            <p>
+                <span>Couleur &nbsp</span>
+                <select v-model="couleur">
+                    <option value="black" selected>Noir</option>
+                    <option value="red">Rouge</option>
+                    <option value="green">Vert</option>
+                    <option value="blue">Bleu</option>
+                </select>&nbsp
+                <span>Taille&nbsp</span>
+                <select v-model="taille">
+                    <option value="16px" selected>16 px</option>
+                    <option value="25px">25 px</option>
+                    <option value="40px">40 px</option>
+                    <option value="60px">60 px</option>
+                </select>
+            </p>
+            <p :style="{color: couleur, fontSize: taille}">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+            </p>
+        </div>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data() {
+                return {
+                    couleur: 'black',
+                    taille: '16px'
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
