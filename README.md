@@ -36,5 +36,5 @@
 - projet1-34 : Classes conditionnelles
 - projet1-35 : Classes conditionnelles (multiple)
 - projet1-36 : Style conditionnel
-- projet1-37 :
-- projet1-38 :
+- projet1-37 : Afficher du code HTML conditionnellement
+- projet1-38 : Super challenge

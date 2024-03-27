@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet1-37</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- la directive v-show garde l'élément dans le dom si true = affiché // false = élement dans le dom à false-->
+        <p>Languages ?</p>
+        <input type="text" v-model="texte" placeholder="Votre langage"><button @click="ajouter">Ajouter</button>
+        <div v-for="langage in langages">
+            <input type="checkbox" v-model="langage.etat">
+            <span>{{langage.lang}}</span>
+            <span v-if="langage.etat"> est coché</span>
+            <span v-else> n'est pas coché</span>
+        </div>
+    </div>
+    <script>
+        app = Vue.createApp({
+            data() {
+                return {
+                    texte: '' ,
+                    langages: []
+                }
+            },
+            methods: {
+                ajouter() {
+                    this.langages.push({lang: this.texte, etat: false})
+                    this.texte=''
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
