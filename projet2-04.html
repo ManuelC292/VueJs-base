@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 2-04</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--Ajouter des donnees dans un composant-->
+        <compteur></compteur>
+    </div>
+    <script>
+        app = Vue.createApp({
+        });
+        app.component('compteur', {
+            data() {
+                return {
+                    compt: 0
+                }
+            },
+            template: '<button @click="clickButton">{{compt}}</button>',
+            methods: {
+                clickButton(){
+                    this.compt++
+                }
+            }
+        })
+        app.mount('#app');
+    </script>
+</body>
+</html>

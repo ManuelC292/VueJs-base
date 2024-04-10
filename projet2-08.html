@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 2-08</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <bonjour prenom='Manuel'></bonjour>
+        <bonjour prenom='Jean'></bonjour>
+        <bonjour prenom='Pierre'></bonjour>
+        <bonjour prenom='Emma'></bonjour>
+    </div>
+    <script>
+        const Bonjour = {
+            template: '<div>Bonjour {{prenom}}</div>', 
+            props: ['prenom']
+        }
+        app = Vue.createApp({
+            components: {
+                'bonjour': Bonjour
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

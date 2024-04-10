@@ -1,5 +1,6 @@
 # Vue Js 3 (cours)
 
+SECTION 1 : PPremier pas en Vue 3
 - projet1-01 : Un premier projet de Vue.js
 - projet1-02 : Un premier projet de Vue.js
 - projet1-03 : Deuxième exemple
@@ -38,3 +39,15 @@
 - projet1-36 : Style conditionnel
 - projet1-37 : Afficher du code HTML conditionnellement
 - projet1-38 : Super challenge
+
+
+SECTION 2 : Les composants Vue JS
+- projet2-01 : Introduction aux composants Vue JS
+- projet2-02 : Un premier composant local
+- projet2-03 : Ajouter des données dans un composant
+- projet2-04 : Ajouter des données dans un composant
+- projet2-05 : Ajouter des données dans un composant
+- projet2-06 : Ajouter des méthodes dans un composant
+- projet2-07 : Passer des données aux composants enfants avec des props
+- projet2-08 : Passer des données aux composants enfants avec des props
+- projet2-09 : Passer des données aux composants enfants avec des props
