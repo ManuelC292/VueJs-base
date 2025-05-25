@@ -130,4 +130,13 @@ SECTION 8 : Plus loin avec Vue.js 3
 - projet8-10 : 
 
 
-SECTION 9 : Quiz, manuel et fichiers source
+SECTION 9 : manuel et fichiers source
+- manuel de la formation
+- sources.zip
+
+
+Formation issue suivie sur UDEMY : 
+- certificat : lien
+
+lien de la formation : 
+https://www.udemy.com/course/vuejs-3-la-formation-complete-pour-debutants/
